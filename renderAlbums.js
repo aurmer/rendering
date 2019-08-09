@@ -12,7 +12,7 @@ function renderAlbum(album) {
 
   return `<div class="album">
       <img src="${album.albumCover}">
-      <h2>${album.title}</h2>
+      <h2 class="album">${album.title}</h2>
       <div class="songs">
         ${songsHTML}
       </div>

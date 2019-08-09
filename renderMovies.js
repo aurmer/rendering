@@ -1,8 +1,25 @@
+function renderMovieFrame(movie) {
+  return `<div class="movie-container">
+    <img class="movie-poster" src="${movie.poster}">
+    <div class="movie-description">
+      <h2 class="movie-title">${movie.title}</h2>
+      <p class="movie-year">${movie.year}</p>
+      <h3 class="rating">IMDB:</h3>
+      <p class="rating">${movie.imdbRating}/10</p>
+      <h3 class="rating">Rotten Tomatoes:</h3>
+      <p class="rating">${movie.rottenTomatoesRating * 100}%</p>
+    </div>
+  </div>
+  `
+}
+
 
 function renderMovies(movies) {
+  let finalHTML = movies.map(renderMovieFrame).join('')
+
     return `
         <div class="text-center mt-5">
-            <code>${JSON.stringify(movies)}</code>
+          ${finalHTML}
         </div>
     `
 }

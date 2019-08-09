@@ -1,3 +1,67 @@
+/* movies */
+
+.movie-container {
+  border: solid #ddd 1.2em;
+  border-radius: .6em;
+  background-color: #ddd;
+  width: 30em;
+  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.5vw;
+}
+
+.movie-poster {
+  width: 10em;
+  margin-right: 1em;
+}
+
+.movie-description {
+  width: 16em;
+  background-color: white;
+  border: solid white 1em;
+  border-radius: .5em;
+  flex-grow: 2;
+  text-align: left;
+  font-size: .9em;
+}
+
+h2.movie-title {
+  font-size: 1.8em;
+}
+
+p.movie-year {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+h3.rating {
+  font-weight: normal;
+  margin: 0;
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+
+p.rating {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+/* circles */
+
+.circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  margin: .2em;
+  clip-path: circle(50% at 50% 50%);
+}
+
 /* albums */
 h1 {
   margin-bottom: 1em;
@@ -10,7 +74,7 @@ hr.postH1 {
   margin-bottom: 2em;
 }
 
-h2 {
+h2.album {
   font-size: 1.5em;
 }
 
