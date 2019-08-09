@@ -1,1 +1,54 @@
-/* Type whatever CSS you need here! */
+/* albums */
+h1 {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  border-bottom: solid #ddd 2px;
+}
+
+hr.postH1 {
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+.album img,h2 {
+  display: inline;
+  vertical-align: bottom;
+}
+.album img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.album h2 {
+  margin-left: 1em;
+}
+
+.songs {
+  margin: 1em 0 1em 0;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em;
+  border-top: solid #ddd 1px;
+}
+
+.song:last-child {
+  border-bottom: solid #ddd 1px;
+}
+
+.song img {
+  width: 1em;
+  height: 1em;
+  margin-right: 1em;
+}
+
+.song .song-title {
+  flex-grow: 2;
+}

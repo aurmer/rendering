@@ -1,16 +1,50 @@
+function renderSong(song) {
+  return `<div class="song">
+      <img src="play-button.svg">
+      <span class="song-title">${song.title}</span>
+      <span class="song-length">${song.length}</span>
+    </div>
+  `
+}
 
-function renderAlbums(albums) {
-    return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(albums)}</code>
-        </div>
-    `
+function renderAlbum(album) {
+  var songsHTML = album.songs.map(renderSong).join('')
+
+  return `<div class="album">
+      <img src="${album.albumCover}">
+      <h2>${album.title}</h2>
+      <div class="songs">
+        ${songsHTML}
+      </div>
+    </div>
+  `
+}
+
+function renderArtist(artist) {
+  var albumsHTML = artist.albums.map(renderAlbum).join('')
+
+  return `<div class="artist">
+    <h1>${artist.artist}</h1>
+    ${albumsHTML}
+    </div>
+  `
+}
+
+function renderArtists(artists) {
+
+  var finalHTML = artists.map(renderArtist).join('')
+
+  return `
+    <div class="mt-5">
+      ${finalHTML}
+    </div>
+  `
 }
 
 function albums() {
     var content = document.getElementById('content');
 
-    var albumsAbstraction = [
+    var artistsAbstraction = [
         {
             artist: "Creed",
             albums: [
@@ -79,6 +113,6 @@ function albums() {
         }
     ]
 
-    content.innerHTML = renderAlbums(albumsAbstraction);
+    content.innerHTML = renderArtists(artistsAbstraction);
 
 }
