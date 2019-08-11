@@ -1,3 +1,200 @@
+/* tweets */
+
+.tweets-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-card {
+  display: inline-block;
+  width: 600px;
+  max-width: 100%;
+  text-align: left;
+  margin: 30px;
+  border-radius: 1em;
+  padding: 20px;
+  border: solid #ddd 1px;
+}
+
+.tweet-card-head {
+  display: flex;
+  align-items: center;
+}
+
+img.profile-pic {
+  height:50px;
+  margin-right: 20px;
+  vertical-align: top;
+}
+
+.tweet-user-name-container {
+  display: inline-block;
+}
+
+.twitter-user-name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.twitter-handle {
+  color: gray;
+  display: block;
+}
+
+.tweet-card-body {
+  border-bottom: solid #ddd 1px;
+  margin-bottom: 5px;
+}
+
+.tweet-text {
+  font-size: 1.8em;
+}
+
+.tweet-card-foot {
+
+}
+
+.twitter-icon {
+  height: 15px;
+  margin: 0 20px 0 20px;
+}
+
+.twitter-stats {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* surveys */
+
+.survey-form input[type="submit"] {
+  margin: 20px 0 40px 0;
+  background-color: #007bff;
+  border-radius: .4em;
+  border: none;
+  padding: .6em;
+  color: white;
+}
+
+.survey-card {
+  text-align: left;
+}
+
+.survey-label {
+  border-bottom: solid gray 1px;
+}
+
+input[type="radio"] {
+  margin: 10px;
+}
+
+textarea {
+  display: block;
+  width: 600px;
+  height: 200px;
+  max-width: 100%;
+}
+
+.field-label {
+  margin: 10px;
+}
+
+/* students */
+
+.student-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-card {
+  display: inline-block;
+  border: solid black 1px;
+  width: 300px;
+  margin: 20px;
+}
+
+.absent {
+  background-color: #B44;
+}
+
+.present {
+  background-color: #4B4;
+}
+
+.student-card h2 {
+  margin-top: 20px;
+}
+
+.student-card .status {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* restaurants */
+
+.restaurant-card {
+  font-weight: bold;
+  background-color: #ddd;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px;
+  text-align: left;
+}
+
+.restaurant-name {
+  margin: 0;
+  font-weight: bolder;
+}
+
+.restaurant-type {
+  margin: 0;
+  color: gray;
+}
+
+.restaurant-price {
+  color: green;
+  font-size: 2em;
+}
+
+/* poker hand */
+
+.playing-card {
+  display: inline-block;
+  width: 12vw;
+  max-width: 100px;
+  padding: 2px;
+}
+
+  /* nametags */
+
+.name-card {
+  display: inline-block;
+  width: 35em;
+  font-size: 1.3vw;
+  border: solid gray 1px;
+  margin: 1em;
+  font-weight: bold;
+}
+
+.name-card-banner {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 3em;
+  padding: .5em;
+  background-color: blue;
+  color: white;
+}
+
+.name-card-label {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 3em;
+  padding: 1.5em;
+}
+
+
 /* movies */
 
 .movie-container {
@@ -16,6 +213,7 @@
 .movie-poster {
   width: 10em;
   margin-right: 1em;
+  object-fit: cover;
 }
 
 .movie-description {
@@ -78,7 +276,7 @@ h2.album {
   font-size: 1.5em;
 }
 
-.album img,h2 {
+.album img,.album h2 {
   display: inline;
   vertical-align: bottom;
 }

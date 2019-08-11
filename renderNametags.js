@@ -1,10 +1,22 @@
+function renderNametag(name) {
+  return `<div class="name-card">
+    <div class="name-card-banner">
+      Hello, my name is:
+    </div>
+    <div class="name-card-label">
+      ${name}
+    </div>
+  </div>`
+}
 
-function renderNametags(nametags) {
-    return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(nametags)}</code>
-        </div>
-    `
+
+function renderNametagArray(nametags) {
+  let finalHTML = nametags.map(renderNametag).join('')
+  return `
+      <div class="text-center mt-5">
+        ${finalHTML}
+      </div>
+  `
 }
 
 function nametags() {
@@ -18,6 +30,6 @@ function nametags() {
        "Krissy"
     ]
 
-    content.innerHTML = renderNametags(nametagsAbstraction);
+    content.innerHTML = renderNametagArray(nametagsAbstraction);
 
 }
